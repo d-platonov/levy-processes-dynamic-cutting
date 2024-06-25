@@ -4,7 +4,8 @@ This repository contains a collection of Python scripts designed to simulate alp
 
 > Ivanenko, D., Knopova, V., & Platonov, D. (2024). On Approximation of Some Lévy(-type) Processes. *Austrian Journal of Statistics*, VV(II), 1-xx.
 
-![example_plot_alpha_stable](https://github.com/d-platonov/levy-processes-dynamic-cutting/assets/173836765/5d0e7311-d267-4aab-9170-56ffa19854ad)
+![example_plot_alpha_stable](https://github.com/d-platonov/levy-processes-dynamic-cutting/assets/173836765/07c2ddfe-eb25-4bb5-a246-0bdbdfa67117)
+
 
 
 ## Files Description
