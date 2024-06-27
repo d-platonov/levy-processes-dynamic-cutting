@@ -1,8 +1,6 @@
 # Dynamic Cutting Approach for Simulating Some Lévy Processes
 
-This repository contains a collection of Python scripts designed to simulate alpha-stable and tempered-stable processes. The implementation is based on the numerical examples (4.1 and 4.2) provided in the paper:
-
-> Ivanenko, D., Knopova, V., & Platonov, D. (2024). On Approximation of Some Lévy(-type) Processes. *Austrian Journal of Statistics*, VV(II), 1-xx.
+This repository contains a collection of Python scripts designed to simulate alpha-stable and tempered-stable processes. The implementation is based on the numerical examples (4.1 and 4.2) provided in the paper [...]:
 
 ![example_plot_alpha_stable](https://github.com/d-platonov/levy-processes-dynamic-cutting/assets/173836765/07c2ddfe-eb25-4bb5-a246-0bdbdfa67117)
 
