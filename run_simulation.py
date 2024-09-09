@@ -8,7 +8,7 @@ if __name__ == '__main__':
     process = AlphaStableProcess(
         t=1, h=0.05, eps=0.01, n_grid=100, z_0=0, seed=2024, alpha=1.5, approximation_type=ApproximationType.CUT_2
     )
-    # process.plot_trajectories(10)
+    process.plot_trajectories(10)
 
     # Monte-Carlo
     monte_carlo = MonteCarlo()
