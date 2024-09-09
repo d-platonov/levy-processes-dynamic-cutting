@@ -73,7 +73,6 @@ class MonteCarlo:
             sign: int = 1
     ) -> np.ndarray:
         """Simulate half of the tempered-stable process using accept-rejection method."""
-        print(f"Simulating tempered-stable process for alpha = {alpha}...")
         params = alpha_stable_params_except_alpha.copy()
         params['alpha'] = alpha
 
@@ -107,6 +106,7 @@ class MonteCarlo:
             seed: int = 12
     ) -> pd.DataFrame:
         """Estimate mean, variance, skewness and kurtosis of the tampered-stable process."""
+        print("Running Monte-Carlo simulations for Tempered-Stable process...")
         rng = np.random.RandomState(seed)
         params = alpha_stable_params_except_alpha.copy()
 
