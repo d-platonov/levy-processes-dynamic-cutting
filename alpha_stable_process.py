@@ -58,15 +58,15 @@ class AlphaStableProcess:
         return self._tau((1 - self.eps) * ((t * self.h) ** self.eps) / (1 - u))
 
     def _generate_jump_times(self) -> np.ndarray:
-        """Generate jump times for the process using a Poisson process approach."""
-        jump_times = np.array([])
-        current_time = 0
-        while current_time < self.t:
-            inter_arrival_time = self._inverse_intensity(self.rng.exponential())
-            current_time += inter_arrival_time
-            if current_time < self.t:
-                jump_times = np.append(jump_times, current_time)
-        return jump_times
+        """Inverse time transformation method."""
+        jump_times = []
+        accumulated_exponential = self.rng.exponential()
+        current_time = self._inverse_intensity(accumulated_exponential)
+        while 0 < current_time < self.t:
+            jump_times.append(current_time)
+            accumulated_exponential += self.rng.exponential()
+            current_time = self._inverse_intensity(accumulated_exponential)
+        return np.array(jump_times)
 
     def simulate_path(self) -> Tuple[np.ndarray, np.ndarray]:
         """Simulate the entire path of the alpha-stable Lévy process."""
