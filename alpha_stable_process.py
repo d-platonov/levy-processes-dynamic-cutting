@@ -54,7 +54,7 @@ class AlphaStableProcess:
         """Inverse transform method to generate jump sizes."""
         tau_threshold = self._tau((t * self.h) ** self.eps)
         if u <= tau_threshold:
-            return self._tau((self.eps / (u * (t * self.h) ** (1 - self.eps))) ** (1 / (self.eps - 1)))
+            return self._tau((self.eps / (u * (t * self.h) ** (1 - self.eps))) ** (self.eps / (self.eps - 1)))
         return self._tau((1 - self.eps) * ((t * self.h) ** self.eps) / (1 - u))
 
     def _generate_jump_times(self) -> np.ndarray:
